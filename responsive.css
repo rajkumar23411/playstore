@@ -11,11 +11,54 @@
     .movies,
     .books {
         height: 100%;
+        overflow-y: scroll;
     }
     .search_div {
         height: 100vh;
     }
     .microphone {
         height: 100vh;
+    }
+    .searchbar input {
+        width: 21rem;
+    }
+    .footer {
+        position: fixed;
+    }
+    .account {
+        height: 100vh;
+    }
+    .acc_cont {
+        height: 70%;
+    }
+    .account_info {
+        display: flex;
+        align-items: center;
+        margin-top: 2.5rem;
+    }
+    .acc_cont .header .logo img {
+        height: 100%;
+        width: 6rem;
+    }
+    .account_info .name_email b {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .manage_acc span {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        font-size: 13px;
+        padding: 7px 24px;
+        border-radius: 1rem;
+        color: #444;
+    }
+    .option_list ul li i {
+        width: 45px;
+        font-size: 20px;
+    }
+    .option_list ul li {
+        margin: 1.5rem 0;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
     }
 }
