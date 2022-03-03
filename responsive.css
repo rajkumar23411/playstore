@@ -5,13 +5,14 @@
         border: none;
         border-radius: 0;
     }
-    .main,
+    .games,
     .apps,
     .offer,
     .movies,
     .books {
         height: 100%;
         overflow-y: scroll;
+        padding-bottom: 9.5rem;
     }
     .search_div {
         height: 100vh;
@@ -53,12 +54,31 @@
     }
     .option_list ul li i {
         width: 45px;
-        font-size: 20px;
+        font-size: 25px;
     }
     .option_list ul li {
-        margin: 1.5rem 0;
+        margin: 1.3rem 0;
         font-size: 13px;
         display: flex;
         align-items: center;
+    }
+    .option_list ul li span {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .option_list ul li {
+        margin: 1rem 0;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+    }
+    .option_list ul li span {
+        font-size: 13px;
+    }
+    .option_list ul li i {
+        width: 45px;
+        font-size: 20px;
     }
 }

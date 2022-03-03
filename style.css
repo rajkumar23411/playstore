@@ -143,10 +143,11 @@ nav ul .active a {
 
 /* ============main content============ */
 
-.main {
-    position: absolute;
-    padding: 0 0.5rem;
-    padding-right: 0;
+.games,
+.apps,
+.offer,
+.movies,
+.books {
     height: calc(80vh - 100px);
     padding-bottom: 60px;
     overflow-x: scroll;
@@ -156,7 +157,7 @@ nav ul .active a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 1rem;
+    padding: 0 1rem;
     margin-top: 1rem;
 }
 
@@ -179,6 +180,7 @@ nav ul .active a {
     display: flex;
     overflow-x: scroll;
     margin-top: 0.5rem;
+    padding: 0 15px;
     gap: 1rem;
     z-index: 2;
 }
@@ -276,11 +278,6 @@ nav ul .active a {
 /* ===================app section================= */
 
 .apps {
-    padding: 0 0.5rem;
-    padding-right: 0;
-    height: calc(80vh - 100px);
-    padding-bottom: 60px;
-    overflow-x: scroll;
     display: none;
 }
 
@@ -293,11 +290,6 @@ nav ul .active a {
 /* ================movie section================ */
 
 .movies {
-    padding: 0 0.5rem;
-    padding-right: 0;
-    height: calc(80vh - 100px);
-    padding-bottom: 60px;
-    overflow-x: scroll;
     display: none;
 }
 
@@ -327,11 +319,6 @@ nav ul .active a {
 /* ==============books section============ */
 
 .books {
-    padding: 0 0.5rem;
-    padding-right: 0;
-    height: calc(80vh - 100px);
-    padding-bottom: 60px;
-    overflow-x: scroll;
     display: none;
 }
 
@@ -353,11 +340,6 @@ nav ul .active a {
 /* =======offer section================ */
 
 .offer {
-    padding: 0 0.5rem;
-    padding-right: 0;
-    height: calc(80vh - 100px);
-    padding-bottom: 60px;
-    overflow-x: scroll;
     display: none;
 }
 
