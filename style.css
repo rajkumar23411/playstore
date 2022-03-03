@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+:root {
+    --icon-color: rgb(133, 133, 133);
+    --small-text: #444;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    height: 80vh;
+    width: 350px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    position: relative;
+    /* z-index: 3; */
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* -----------searchbar------------- */
+
+.searchbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.searchbar input {
+    width: 300px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    padding-left: 3rem;
+}
+
+.searchbar input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.searchbar .fa-magnifying-glass,
+.searchbar .fa-microphone,
+.name_icon {
+    position: absolute;
+    color: var(--icon-color);
+}
+
+.searchbar .fa-magnifying-glass {
+    left: 38px;
+    font-size: 18px;
+}
+
+.searchbar .name_icon {
+    right: 38px;
+    background: #e74c3c;
+    border-radius: 50%;
+    color: #fff;
+    padding: 4px 9px;
+    cursor: pointer;
+}
+
+.searchbar .fa-microphone {
+    right: 80px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* ==================nav bar================== */
+
+nav {
+    display: flex;
+    overflow-x: scroll;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+nav::-webkit-scrollbar {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+}
+
+nav ul li {
+    margin-top: 1rem;
+    width: max-content;
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #444;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+nav ul .active {
+    border-bottom: 4px solid #16a085;
+    transition: 0.3s;
+    padding-bottom: 8px;
+}
+
+nav ul .active a {
+    color: #16a085;
+}
+
+
+/* ============main content============ */
+
+.main {
+    position: absolute;
+    padding: 0 0.5rem;
+    padding-right: 0;
+    height: calc(80vh - 100px);
+    padding-bottom: 60px;
+    overflow-x: scroll;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    margin-top: 1rem;
+}
+
+.heading small {
+    font-weight: 500;
+    color: #222;
+    font-size: 14px;
+}
+
+.heading small span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.heading i {
+    color: #222;
+}
+
+.container {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 0.5rem;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.box1 img {
+    height: 6rem;
+    width: 11rem;
+    border-radius: 8px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.info img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.info span {
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9rem;
+}
+
+.info span p {
+    color: #222;
+    font-size: 11px;
+}
+
+.info span small {
+    font-size: 10px;
+    font-weight: normal;
+    color: var(--small-text);
+    display: flex;
+    align-items: center;
+}
+
+.info span small i {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 8px;
+    margin-right: 6px;
+}
+
+
+/* =======footer======= */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    z-index: 1;
+    border-top: 1px solid #888;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    padding: 0 0.5rem;
+    gap: 2rem;
+}
+
+.footer ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #444;
+}
+
+.footer ul li i {
+    font-size: 20px;
+    padding-bottom: 4px;
+}
+
+.footer ul li small {
+    font-weight: 500;
+}
+
+.footer ul .active {
+    color: #16a085;
+}
+
+
+/* ===================app section================= */
+
+.apps {
+    padding: 0 0.5rem;
+    padding-right: 0;
+    height: calc(80vh - 100px);
+    padding-bottom: 60px;
+    overflow-x: scroll;
+    display: none;
+}
+
+.apps .container .box1 img {
+    height: 5rem;
+    width: 5rem;
+}
+
+
+/* ================movie section================ */
+
+.movies {
+    padding: 0 0.5rem;
+    padding-right: 0;
+    height: calc(80vh - 100px);
+    padding-bottom: 60px;
+    overflow-x: scroll;
+    display: none;
+}
+
+.movies .container .box1 img,
+.books .container .box1 img,
+.book_offer .box1 img {
+    height: 8rem;
+    width: 6rem;
+}
+
+.movies .info span p {
+    color: #222;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.movies .heading small span,
+.books .heading small span,
+.offer .heading small span {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+
+/* ==============books section============ */
+
+.books {
+    padding: 0 0.5rem;
+    padding-right: 0;
+    height: calc(80vh - 100px);
+    padding-bottom: 60px;
+    overflow-x: scroll;
+    display: none;
+}
+
+.line_through {
+    color: #666;
+    text-decoration: line-through;
+}
+
+.movies .info span,
+.books .info span {
+    padding-left: 0;
+}
+
+.books .info span p {
+    font-size: 10px;
+}
+
+
+/* =======offer section================ */
+
+.offer {
+    padding: 0 0.5rem;
+    padding-right: 0;
+    height: calc(80vh - 100px);
+    padding-bottom: 60px;
+    overflow-x: scroll;
+    display: none;
+}
+
+.image {
+    height: 11rem;
+    width: 19.5rem;
+    position: relative;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+}
+
+.image p {
+    position: absolute;
+    z-index: 3;
+    bottom: 0px;
+    left: 0;
+    padding: 10px;
+    /* color: #fff; */
+    font-weight: 500;
+    background-image: linear-gradient(to top, rgba(211, 84, 0, 1.0), transparent);
+    border-radius: 11px;
+    width: 100%;
+}
+
+.offer .info {
+    padding-top: 10px;
+}
+
+.offer .info img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.offer .info span {
+    line-height: 16px;
+}
+
+.offer .info span p {
+    font-size: 12px;
+}
+
+.offer .info span small {
+    font-size: 11px;
+}
+
+.movie_offer .box1 img {
+    height: 8rem;
+    width: 6rem;
+}
+
+.movie_offer .box1 .info span small span,
+.book_offer .box1 .info span small span {
+    padding-left: 0;
+}
+
+.book_offer .box1 .info span p {
+    font-size: 10px;
+    line-height: 13px;
+}
+
+
+/* ===========microphone============== */
+
+.microphone {
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    top: -1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.microphone.visible {
+    top: 0;
+    visibility: visible;
+}
+
+.microphone .micro_cont {
+    background: #fff;
+    border-radius: 4px;
+    height: 250px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.micro_cont .symbol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.micophone_icon {
+    height: 60px;
+    width: 60px;
+    background: dodgerblue;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 9;
+}
+
+.micophone_icon i {
+    font-size: 23px;
+    color: #fff;
+    z-index: 10000;
+}
+
+.micophone_icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: dodgerblue;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    animation: pulse 1000ms infinite;
+    z-index: 8;
+}
+
+.cross {
+    position: absolute;
+    font-weight: bold;
+    color: #fff;
+}
+
+#micro_Cross {
+    font-size: 2rem;
+    top: 3px;
+    right: 11px;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.95);
+        opacity: 0.75;
+    }
+    to {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+
+/* ==========account========== */
+
+.account {
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    top: 0;
+    left: -1000px;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.account.active {
+    left: 0;
+}
+
+.acc_cont {
+    height: 400px;
+    width: 95%;
+    border-radius: 4px;
+    background: #fff;
+    padding: 1rem;
+    position: relative;
+}
+
+.acc_cont .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acc_cont .header .logo {
+    position: absolute;
+    top: 0;
+}
+
+.acc_cont .header .logo img {
+    height: 100%;
+    width: 5rem;
+}
+
+.account_info {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.account_info .name_email {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.account_info .name_email b {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.account_info .name_email small {
+    font-weight: normal;
+    font-size: 11px;
+    color: #555;
+}
+
+#name_icon {
+    background: #e74c3c;
+    border-radius: 50%;
+    color: #fff;
+    padding: 9px 14px;
+    display: grid;
+    place-items: center;
+}
+
+.manage_acc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.manage_acc span {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 1rem;
+    color: #444;
+}
+
+.option_list {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: var(--small-text);
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+}
+
+.option_list ul li {
+    margin: 0.8rem 0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.option_list ul li i {
+    width: 45px;
+    font-size: 16px;
+}
+
+.option_list ul li:first-child {
+    margin: 0 0;
+}
+
+.option_list ul li:last-child {
+    margin-bottom: 0;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    font-size: 12px;
+    color: var(--icon-color);
+}
+
+#acc_close {
+    top: -4px;
+    left: 10px;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 300;
+    cursor: pointer;
+    color: #555;
+}
+
+
+/* =========search div========== */
+
+.search_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    background: #fff;
+    z-index: 300;
+    display: none;
+}
+
+.search_div.active {
+    display: block;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 1rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 14px;
+}
+
+.top input {
+    width: 80%;
+    border: none;
+}
+
+.top input::placeholder {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.top i {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
